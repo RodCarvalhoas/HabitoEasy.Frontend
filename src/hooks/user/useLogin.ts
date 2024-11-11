@@ -30,7 +30,6 @@ export const useLogin = () => {
         mutationFn: postLogin,
         onSuccess: (response) => {
             try {
-                console.log(response)
                 AxiosConfig.setAuthToken(response!);
                 navigate("/home");
             } catch(err) {
