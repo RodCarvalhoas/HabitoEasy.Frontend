@@ -14,9 +14,9 @@ export const InnerContainer = styled.div`
 export const NavigationFooterBar = styled.div`
     padding: 6px;
     background-color: white;
-    max-height: 80px;
+    max-height: 70px;
     height: 100%;
-    max-width: 300px;
+    max-width: 250px;
     width: 100%;
     position: absolute;
     left: 50%;

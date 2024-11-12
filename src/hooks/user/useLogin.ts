@@ -31,7 +31,7 @@ export const useLogin = () => {
         onSuccess: (response) => {
             try {
                 AxiosConfig.setAuthToken(response!);
-                navigate("/home");
+                navigate("/calendar");
             } catch(err) {
                 throw new Error(unexpectedErrorText).message;
             }

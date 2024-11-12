@@ -6,8 +6,10 @@ import AxiosConfig from './configs/AxiosConfig';
 import { useSetRecoilState } from 'recoil';
 import { authState } from './state/authState';
 import { ProtectedRoute } from './helpers/ProtectedRoutesHelper';
-import HomePage from './pages/homePage/HomePage';
+import CalendarPage from './pages/calendarPage/CalendarPage';
 import CommonContent from './pages/commonContent/CommonContent';
+import HabitPage from './pages/habitPage/HabitPage';
+import AnalyticsPage from './pages/analyticsPage/AnalyticsPage';
 
 const queryClient = new QueryClient()
 
@@ -25,8 +27,10 @@ function App() {
           
           <Route element={<ProtectedRoute/>}>
             <Route element={<CommonContent/>}>
-              <Route path="/" element={<HomePage/>}/>
-              <Route path="/home" element={<HomePage/>}/>
+              <Route path="/" element={<CalendarPage/>}/>
+              <Route path="/calendar" element={<CalendarPage/>}/>
+              <Route path="/habit" element={<HabitPage/>}/>
+              <Route path="/analytics" element={<AnalyticsPage/>}/>
             </Route>
           </Route>
         </Routes>
